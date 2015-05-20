@@ -1,0 +1,4 @@
+segurex:
+    resource: "@SegurexBundle/Resources/config/routing.yml"
+    prefix:   /
+

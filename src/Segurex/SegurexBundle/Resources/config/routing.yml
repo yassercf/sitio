@@ -1,0 +1,3 @@
+segurex_homepage:
+    path:     /
+    defaults: { _controller: SegurexBundle:Default:index }

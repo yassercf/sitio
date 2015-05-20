@@ -1,0 +1,7 @@
+@media screen and (max-width: 1200px) 	{
+	.page_container { width: 900px; }
+}
+
+@media screen and (max-width: 1100px) 	{
+	.page_container { width: 800px; }
+}

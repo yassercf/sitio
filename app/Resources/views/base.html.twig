@@ -2,11 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=1">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="author" content="">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- <link rel="apple-touch-icon" href="http://xsoft.org/assets/img/xsoft_touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://xsoft.org/assets/img/xsoft_touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://xsoft.org/assets/img/xsoft_touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://xsoft.org/assets/img/xsoft_touch-icon-ipad-retina.png"> -->
+
+        <!--[if lte IE 8]>
+        <meta http-equiv="refresh" content="0; url=http://browsehappy.com/">
+        <![endif]-->
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        
+        <script type="text/javascript" async="" src="./XSoft_files/watch.js"></script><script>
+            document.createElement('aside');
+            document.createElement('section');
+        </script>
+        <title>SEGUREX~{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
+            <link type="text/css" href="{{ asset('css/onepage-scroll.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('css/media-queries.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('css/scrollbar.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('css/css') }}" rel="stylesheet" media="screen">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
     </head>
-    <body>
+    <body class="viewing-page-1" data-section="/">
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
