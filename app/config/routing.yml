@@ -2,3 +2,6 @@ segurex:
     resource: "@SegurexBundle/Resources/config/routing.yml"
     prefix:   /
 
+404:
+    path:     /404/
+    defaults: { _controller: SegurexBundle:Default:error }

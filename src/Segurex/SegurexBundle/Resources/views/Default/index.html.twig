@@ -1,121 +1,176 @@
 {% extends "::base.html.twig" %}
-{% block title %}Inicio{% endblock %}
+{% block title %}{% endblock %}
  
 {% block body %}
-   <ul class="onepage-pagination"><li><a data-index="1" href="http://xsoft.org/#1" class="active"></a></li><li><a data-index="2" href="http://xsoft.org/#2" class=""></a></li><li><a data-index="3" href="http://xsoft.org/#3"></a></li><li><a data-index="4" href="http://xsoft.org/#4"></a></li><li><a data-index="5" href="http://xsoft.org/#5"></a></li></ul>
+   <ul class="onepage-pagination">
+   	<li>
+   		<a data-index="1" href="#/#1" class="active"></a></li><li>
+   		<a data-index="2" href="#/#2" class=""></a></li><li>
+   		<a data-index="3" href="#/#3"></a></li><li>
+   		<a data-index="4" href="#/#4"></a></li><li>
+   		<a data-index="5" href="#/#5"></a></li></ul>
 		<div class="wrapper">
 			<div id="fix-nav">
 				<ul id="menu-list" style="position: absolute; top: 196px;">
-					<li><a class="active" data-index="1" href="./XSoft_files/XSoft.html"><span class="icon icon-us"></span></a></li>
-					<li><a class="" data-index="2" href="http://xsoft.org/about"><span class="icon icon-company"></span></a></li>
-					<li><a class="" data-index="3" href="http://xsoft.org/development"><span class="icon icon-work"></span></a></li>
-					<li><a class="" data-index="4" href="http://xsoft.org/job"><span class="icon icon-vacancy"></span></a></li>
-					<li><a class="" data-index="5" href="http://xsoft.org/contacts"><span class="icon icon-contacts"></span></a></li>
+					<li><a class="active" data-index="1" href="#"><span class="icon icon-home"></span></a></li>
+					<li><a class="" data-index="2" href="#/about"><span class="icon icon-shield"></span></a></li>
+					<li><a class="" data-index="3" href="#/development"><span class="icon icon-download2"></span></a></li>
+					<li><a class="" data-index="4" href="#/job"><span class="icon icon-file-text2"></span></a></li>
+					<li><a class="" data-index="5" href="#/contacts"><span class="icon icon-mail"></span></a></li>
 				</ul>
 				<ul id="fix-nav-full" style="position: absolute; top: 196px;">
-					<li><a class="active" data-index="1" href="./XSoft_files/XSoft.html">Мы</a></li>
-					<li><a class="" data-index="2" href="http://xsoft.org/about">Компания</a></li>
-					<li><a class="" data-index="3" href="http://xsoft.org/development">Разработки</a></li>
-					<li><a class="" data-index="4" href="http://xsoft.org/job">Вакансии</a></li>
-					<li><a class="" data-index="5" href="http://xsoft.org/contacts">Контакты</a></li>
+					<li><a class="active" data-index="1" href="#">Inicio</a></li>
+					<li><a class="" data-index="2" href="#/about">Sobre el DSI</a></li>
+					<li><a class="" data-index="3" href="#/development">Descargas</a></li>
+					<li><a class="" data-index="4" href="#/job">Reportes</a></li>
+					<li><a class="" data-index="5" href="#/contacts">Contacto</a></li>
 				</ul>
 				<div class="copy">
-					<a href="http://siteexpo.ru/" target="_blank"><img src="./XSoft_files/logoFix.svg" alt=""></a>
-					<p>2012–2014 XSoft Ltd.</p>
+					{# <a href="http://siteexpo.ru/" target="_blank"><img src="./XSoft_files/logoFix.svg" alt=""></a> #}
+					<p>MINREX ~ 2015</p>
 				</div>
 			</div>
-			<a href="./XSoft_files/XSoft.html"><span id="logo" class="icon icon-xsoft"></span></a>
+			<a href="#">
+				<span id="logo" class="icon icon-xsoft"></span></a>
 			<div class="main onepage-wrapper" style="position: relative; top: 0%;">
 				<section class="page1 section active" data-id="/" data-index="1" style="position: absolute; top: 0%; left: 0px;">
 					<video id="player" autoplay="autoplay" muted="muted" loop="loop" preload="auto" __idm_id__="286721">
-						<source src="/assets/video/xsoft.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-						<source src="/assets/video/xsoft.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-						<source src="/assets/video/xsoft.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+						<source src="{{ asset('bundles/segurex/videos/ksp.mp4') }}" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+						<source src="{{ asset('bundles/segurex/videos/ksp.webm') }}" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+						<source src="{{ asset('bundles/segurex/videos/ksp.ogv') }}" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
 						Your browser does not support the video tag.
 					</video>
 					<div class="page_container">
 						<div id="slider-wrap" style="position: absolute; top: 186.5px; left: 314px;">
 							<div id="slider">
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;"><h3>Великие идеи не приходят сразу. Мы даем им время созреть, чтобы довести до идеала.</h3></div>
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;"><h3>Техногики, диджитал мозги, скромные супермены технологий. Да, мы любим IT.</h3></div>
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;"><h3>Мы учимся и развиваемся. Желание создавать что–то новое постоянно двигает нас вперед.</h3></div>
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;"><h3>Самое время начать думать о том, с чем ты войдешь в историю. Мы просто хотим перевернуть представление о современных технологиях.</h3></div>
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;"><h3>Мы беремся за реализацию тех концепций, которые снятся нам по ночам после того как мы воплощаем их в жизнь целый день.</h3></div>
-								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;"><h3>“Мне нравится, это принесет кучу денег. Сделаем это!” Вот что мы любим слышать от нашего директора.</h3></div>
-							<div class="sli-links"><span class="control-slide">0</span><span class="control-slide">1</span><span class="control-slide">2</span><span class="control-slide">3</span><span class="control-slide active">4</span><span class="control-slide">5</span></div></div>
+								{% for titulo in titulares %}
+								 	<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3>{{titulo}}</h3></div>
+					            {% endfor %}
+								{# <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3></h3></div>
+								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3></h3></div>
+								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3></h3></div>
+								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3></h3></div>
+								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;">
+									<h3></h3></div>
+								<div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;">
+									<h3></h3></div> #}
+								<div class="sli-links">
+									<span class="control-slide active">0</span>
+									<span class="control-slide">1</span>
+									<span class="control-slide">2</span>
+									<span class="control-slide">3</span>
+									<span class="control-slide">4</span>
+									<span class="control-slide">5</span></div>
+							</div>
 						</div>
 					</div>
 					<div id="animated-example" class="animated bounce">
-						<a id="move-down" class="move-down" href="http://xsoft.org/#"><span class="icon icon-arrow"></span></a>
+						<a id="move-down" class="move-down" href="#/#"><span class="icon icon-arrow"></span></a>
 					</div>
 					<!--<a class="move-link" href="https://vimeo.com/" target="_blank"><img src="/assets/img/link-vimeo.png" alt=""></a>-->
 				</section>
-				<section class="page3 section" data-id="about" data-index="2" style="position: absolute; top: 100%; left: 0px;">
+				<section class="page3 section" data-id="about" data-index="2" style="position: absolute; top: 1%; left: 0px;">
 					<div class="page_container">
-						<ul id="about" style="position: absolute; top: 112px;">
+						<ul id="about" style="position: absolute; top: 1px;">
 							<li>
-								<h2>Главное о нас</h2>
-								<p>XSoft — команда из 35 талантливых и скромных разработчиков, проектировщиков, менеджеров и дизайнеров. Мы долго учились и работали на всяких других работах для того чтобы понять, как делать качественные IT–продукты.<br> Теперь мы делаем все по–новому и по–своему.</p>
+								<h2>Sobre el <b>DSI</b></h2>
+								<p>El <b>DSI</b> o <b>Departamento de Seguridad Informática</b> es una estructura especializada que contribuye al fortalecimiento de la seguridad Informática.<br> Pertenece al Centro de Gestión de Sistemas Informáticos (CTSI) y dicta las politicas de seguridad informática del MINREX.</p>
 							</li>
 							<li>
-								<h4>Да, работа должна<br> быть увлекательной</h4>
-								<p>Нам нравится ставить перед собой интересные и сложные задачи. Только команда, у которой есть стимул к развитию, создает инновационные продукты.</p>
+								<h4>MISIÓN:</h4>
+								<p>Contribuir al fortalecimiento de la seguridad en el ciberespacio y coordinar de manera efectiva la gestión de los eventos informáticos que impactan en la ciberseguridad del Ministerio.</p>
 							</li>
 							<li>
-								<h4>Наши технологии</h4>
-								<p>Мы оперативно реагируем на запросы наших пользователей и постоянно работаем над улучшением программного обеспечения.</p>
+								
+								<p>
+								<h4>Funciones:</h4>
+								1. Proponer políticas, estrategias y medidas de seguridad tecnológica.<br>
+								2. Dar seguimiento a los incidentes que afectan la Seguridad Informática del Ministerio.<br>
+								3.Llevar a cabo auditorias para velar por el cumplimiento de las politicas de seguridad informática establecidas.<br>
+								4. Promover una cultura de ciberseguridad y de capacitación permanente en el MinRex.
+								
+								</p>
 							</li>
 						</ul>
 					</div>
 				</section>
 				<section class="page2 section" data-id="development" data-index="3" style="position: absolute; top: 200%; left: 0px;">
 					<div class="page_container">
-						<aside style="position: absolute; top: 175px;">
-							<h2>ZIONITI</h2>
-							<p>Безопасная почта, которая гарантирует конфиденциальность переписки. Для доступа к аккаунту используется смарт–карта.</p>
-							<a href="http://zioniti.com/" target="_blank">zioniti.com</a>
+						<aside style="position: absolute; top: 10px;">
+							<h2>Descargas</h2>
+							<ul style="width: 35%; height: 455px; overflow: auto">
+								<h1>Antivirus</h1>
+								<li><a href="\">Licencia para la Casa (Kaspersky).</a></li>
+								<h1>Tutoriales</h1>
+								<li><a href="\">Tutorial para la licencias.</a></li>
+								<h1>Tutoriales</h1>
+								<li><a href="\">Tutorial para la licencias.</a></li>
+							{# 	{% for item in 0..50 %}
+									<li><a href="\">Elemento {{item}} </a></li>
+								{% endfor %} #}
+							</ul>
 						</aside>
 					</div>
 				</section>
 				<section class="page4 section" id="vc-slide" data-id="job" data-index="4" style="position: absolute; top: 300%; left: 0px;">
 					<div class="page_container">
-						<aside style="position: absolute; top: 175px;">
-							<h2>вакансии</h2>
-							<p>У тебя есть идеи, которые ты мечтаешь реализовать? Работай у нас!</p>
+						<aside style="top: 175px;">
+							<h2>Reportes</h2>
+							<p>
+							Un Incidente Computacional se define como cualquier evento que se produzca, de forma accidental o intencional, que afecte o ponga en peligro las Tecnologías de la Información o los procesos que con ellas se realizan.
+							</p>
+							<p>Si usted sospechara o tuviera evidencia que se está produciendo algún tipo de incidente computacional en su red, deberá garantizar una correcta evaluación de lo que ha ocurrido, a quién, cómo y cuándo debe ser reportado, la respuesta adecuada, así como los aspectos relacionados con su documentación, la preservación de las evidencias y las acciones a seguir una vez restablecida la situación inicial. <br>
+ 							<b>Vía correo</b>: <a href="mailto:seginf@minrex.gob.cu">seginf@minrex.gob.cu</a></p>
+ 
+							
 						</aside>
-						<ul id="vc" style="position: absolute; top: 222.5px;">
-															<li data-job="1"><h4>— PHP-программист</h4></li>
-															<li data-job="2"><h4>— Веб-дизайнер</h4></li>
-													</ul>
+						<ul id="vc" style="position: absolute; top: 222.5px;">						
+							<li data-job="1"><h1>>> <u>Realizar un reporte</u> >></h1></li>
+							{# <li data-job="2"><h4>— Веб-дизайнер</h4></li> #}
+						</ul>
+						
 						<div class="vc-container" id="vc-content" style="margin-bottom: 70px;">
 							<span class="closeBtn icon icon-closer"></span>
 							<div class="vc-container-outer ps-container" id="description">
 								<div class="vc-container-inner" id="job-box">
-									<img class="logo-vc" src="./XSoft_files/logo-vc.png" alt="">
+									{# <img class="logo-vc" src="{{ asset('bundles/segurex/images/logo.png') }}" alt=""> #}
 									<div class="clear"></div>
 									<div id="job-content"></div>
-									<h4>Откликнуться на вакансию</h4>
-									<span>*обязательные поля</span>
+									<h4>Formulario de reporte</h4>
+									<span>*campos de llenado obligatorio</span>
 									<div class="form_input" id="vc-form">
-										<form action="http://xsoft.org/job/apply" method="post" id="job-form" accept-charset="utf-8" class="ajax-form">
+										<form action="#/job/apply" method="post" id="job-form" accept-charset="utf-8" class="ajax-form">
 											<input type="hidden" name="job_id">
-											<p class="input-wrap"><label>Имя*</label><input type="text" name="name"></p>
-											<p class="input-wrap"><label>Фамилия*</label><input type="text" name="lastname"></p>
-											<p class="input-wrap"><label>Email*</label><input type="text" name="email"></p>
-											<p class="input-wrap"><label>Телефон*</label><input type="text" name="phone"></p>
+											<p class="input-wrap"><label>Nombre completo*</label><input type="text" name="name"></p>
+											{# Pendiente a convertir en un select #}
+											<p class="input-wrap"><label>Área*</label><input type="text" name="lastname"></p>
+											<p class="input-wrap"><label>Correo*</label><input type="text" name="email"></p>
+											<p class="input-wrap"><label>Teléfono*</label><input type="text" name="phone"></p>
+											{# CARGAR UNA IMAGEN
 											<div class="load" id="btn-job-vc">
 												<input type="file" name="file" accept="*" id="vc-file">
 												<span class="attach" id="btn-frame">Прикрепить резюме<i></i></span>
 												<span class="fill" id="btn-fill"></span>
-											</div>
+											</div> #}
 											<span class="attach-name" id="vc-file-name"></span>
 											<div class="clear"></div>
-											<p class="input-wrap"><label>Сайт</label><input type="text" name="site"></p>
-											<textarea name="text"></textarea>
-											<p id="vc-success">Ваш отклик успешно отправлен.<br>Мы свяжемся с вами в ближайшее время.</p>
-											<button id="submit">Отправить<span class="fill"></span></button>
+											<p>Sobre el Equipo:</p>
+											<p class="input-wrap"><label>No. Inventario</label><input type="text" name="site"></p>
+											<p class="input-wrap"><label>Descripción del problema.</label><textarea name="text"></textarea></p>
+											<p id="vc-success">Descripción del problema.<br>Incluya la mayor cantidad de detalles posibles.</p>
+											<button id="submit">Enviar<span class="fill"></span></button>
 										</form>
-									</div>
+										Ejemplos de Eventos:<br>
+										 • Intentos (sean fallidos o exitosos) de obtener acceso a un sistema o sus datos.<br>
+										 • Interrupción no deseada o denegación de servicios.<br>
+										 • Uso no autorizado de un sistema para el procesamiento o almacenamiento de información.<br>
+										 • Cambios en las características del hardware, firmware o software del sistema sin el conocimiento, instrucción o consentimiento del responsable de dicho sistema.<br>
+ 									</div>
 
 								</div>
 							<div class="ps-scrollbar-x-rail" style="width: 652px; display: none; left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 677px; display: none; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
@@ -125,14 +180,16 @@
 				<section class="page5 section" data-id="contacts" data-index="5" style="position: absolute; top: 400%; left: 0px;">
 					<div class="modal-contact">
 						<div class="modalWin" style="position: absolute; top: 211px; left: 314px;">
-							<h2>Контакты</h2>
+							<h2>Contacto</h2>
 							<ul>
 								<li>
-									<label>Москва</label>
+									<label>Cuba</label>
 									<div class="address">
-										<p class="tel">+7 499 643-83-24</p>
-										<p><a href="mailto:info@xsoft.org?Subject=Hello">info@xsoft.org</a></p>
-										<p><a class="map" target="_blank" href="https://www.google.ru/maps/place/%D0%9F%D1%80%D0%B5%D1%81%D0%BD%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1.,+12,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+123317/@55.749893,37.5372362,17z/data=!3m1!4b1!4m2!3m1!1s0x46b54bdc2341dfc5:0x624eda2900c434bd">Пресненская набережная, д. 12</a> ММДЦ «Москва Сити», комплекс Федерация, башня Восток, 31 этаж, офис Q</p>
+										<p class="tel">+7 836 4239</p>
+										<p><a href="mailto:seginf@minrex.gob.cu?Subject=Hola">seginf@minrex.gob.cu</a></p>
+										<p>La Habana, Vedado, Ave. de los Presidentes (G) entre 5ta y Calzada y H</p>
+										Mapa
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.7276280994042!2d-82.39391499999999!3d23.143629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd777c7508870d%3A0x96016e4dbce1239f!2sMinisterio+de+Relaciones+Exteriores!5e0!3m2!1ses!2sru!4v1432241582797" width="600" height="450" frameborder="0" style="border:0"></iframe>
 									</div>
 								</li>
 								<div class="clear"></div>
@@ -155,18 +212,16 @@
 			</div>
 		</div>
 
-		<!-- javascript
-		================================================== -->
-		<script type="text/javascript" src="./XSoft_files/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="./XSoft_files/jquery.onepage-scroll.js"></script>
-<script type="text/javascript" src="./XSoft_files/js.js"></script>
-<script type="text/javascript" src="./XSoft_files/scrollbar.js"></script>
-<script type="text/javascript" src="./XSoft_files/mousewheel.js"></script>
-<script type="text/javascript" src="./XSoft_files/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="./XSoft_files/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="./XSoft_files/jquery.fileupload.js"></script>
+		
+		
 
-		<!-- Yandex.Metrika counter -->
+		
+{% endblock %}
+{% block javascripts %}
+	<!-- javascript
+		================================================== -->
+	{{ parent() }}
+	{# <!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
 			(function (d, w, c) {
 				(w[c] = w[c] || []).push(function() {
@@ -192,5 +247,6 @@
 			})(document, window, "yandex_metrika_callbacks");
 		</script>
 		<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/24277645" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
-		<!-- /Yandex.Metrika counter -->
+	<!-- /Yandex.Metrika counter --> #}
 {% endblock %}
+

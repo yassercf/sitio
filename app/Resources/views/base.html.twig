@@ -23,24 +23,33 @@
         <![endif]-->
 
         
-        <script type="text/javascript" async="" src="./XSoft_files/watch.js"></script><script>
+        <script type="text/javascript" async="" src="{{ asset('bundles/segurex/js/watch.js') }}"></script><script>
             document.createElement('aside');
             document.createElement('section');
         </script>
-        <title>SEGUREX~{% block title %}{% endblock %}</title>
+        <title>{% block title %}SEGUREX{% endblock %}</title>
         {% block stylesheets %}
-            <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
-            <link type="text/css" href="{{ asset('css/onepage-scroll.css') }}" rel="stylesheet" media="screen">
-            <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
-            <link type="text/css" href="{{ asset('css/media-queries.css') }}" rel="stylesheet" media="screen">
-            <link type="text/css" href="{{ asset('css/scrollbar.css') }}" rel="stylesheet" media="screen">
-            <link type="text/css" href="{{ asset('css/css') }}" rel="stylesheet" media="screen">
+            {# <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" /> #}
+            <link type="text/css" href="{{ asset('bundles/segurex/css/onepage-scroll.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('bundles/segurex/css/style.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('bundles/segurex/css/media-queries.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('bundles/segurex/css/scrollbar.css') }}" rel="stylesheet" media="screen">
+            <link type="text/css" href="{{ asset('bundles/segurex/css/css') }}" rel="stylesheet" media="screen">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
     </head>
     <body class="viewing-page-1" data-section="/">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/jquery-2.1.1.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/jquery.onepage-scroll.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/js.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/scrollbar.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/mousewheel.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/jquery.ui.widget.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/jquery.iframe-transport.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/segurex/js/jquery.fileupload.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
