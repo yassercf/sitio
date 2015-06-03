@@ -11,23 +11,25 @@
    		<a data-index="5" href="#/#5"></a></li></ul>
 		<div class="wrapper">
 			<div id="fix-nav">
+				
 				<ul id="menu-list" style="position: absolute; top: 196px;">
 					<li><a class="active" data-index="1" href="#"><span class="icon icon-home"></span></a></li>
 					<li><a class="" data-index="2" href="#/about"><span class="icon icon-shield"></span></a></li>
-					<li><a class="" data-index="3" href="#/development"><span class="icon icon-download2"></span></a></li>
 					<li><a class="" data-index="4" href="#/job"><span class="icon icon-file-text2"></span></a></li>
 					<li><a class="" data-index="5" href="#/contacts"><span class="icon icon-mail"></span></a></li>
+					<li><a class="" href="{{ path('descargas') }}"><span class="icon icon-download2"></span></a></li>
+					{# <li><a class="" data-index="3" href="{{ path('descargas') }}"><span class="icon icon-download2"></span></a></li> #}
 				</ul>
 				<ul id="fix-nav-full" style="position: absolute; top: 196px;">
 					<li><a class="active" data-index="1" href="#">Inicio</a></li>
 					<li><a class="" data-index="2" href="#/about">Sobre el DSI</a></li>
-					<li><a class="" data-index="3" href="#/development">Descargas</a></li>
 					<li><a class="" data-index="4" href="#/job">Reportes</a></li>
 					<li><a class="" data-index="5" href="#/contacts">Contacto</a></li>
+					<li><a class="" href="{{ path('descargas') }}">Descargas</a></li>
+					{# <li><a class="" data-index="3" href="{{ path('descargas') }}">Descargas</a></li> #}
 				</ul>
 				<div class="copy">
-					{# <a href="http://siteexpo.ru/" target="_blank"><img src="./XSoft_files/logoFix.svg" alt=""></a> #}
-					<p>MINREX ~ 2015</p>
+					{# <a href="http://siteexpo.ru/" target="_blank"><img src="./XSoft_files/logoFix.svg" alt=""></a> #}				
 				</div>
 			</div>
 			<a href="#">
@@ -76,6 +78,7 @@
 				</section>
 				<section class="page3 section" data-id="about" data-index="2" style="position: absolute; top: 1%; left: 0px;">
 					<div class="page_container">
+						
 						<ul id="about" style="position: absolute; top: 1px;">
 							<li>
 								<h2>Sobre el <b>DSI</b></h2>
@@ -99,40 +102,51 @@
 						</ul>
 					</div>
 				</section>
-				<section class="page2 section" data-id="development" data-index="3" style="position: absolute; top: 200%; left: 0px;">
+				{# <section class="page2 section" data-id="development" data-index="3" style="position: absolute; top: 200%; left: 0px;">
 					<div class="page_container">
 						<aside style="position: absolute; top: 10px;">
-							<h2>Descargas</h2>
-							<ul style="width: 35%; height: 455px; overflow: auto">
-								<h1>Antivirus</h1>
-								<li><a href="\">Licencia para la Casa (Kaspersky).</a></li>
-								<h1>Tutoriales</h1>
-								<li><a href="\">Tutorial para la licencias.</a></li>
-								<h1>Tutoriales</h1>
-								<li><a href="\">Tutorial para la licencias.</a></li>
-							{# 	{% for item in 0..50 %}
-									<li><a href="\">Elemento {{item}} </a></li>
-								{% endfor %} #}
-							</ul>
+							{% embed "SegurexBundle:Descargas:index.html.twig" %}							    
+							{% endembed %}							
 						</aside>
 					</div>
-				</section>
+				</section> #}
 				<section class="page4 section" id="vc-slide" data-id="job" data-index="4" style="position: absolute; top: 300%; left: 0px;">
 					<div class="page_container">
+
 						<aside style="top: 175px;">
 							<h2>Reportes</h2>
+							<div class="container bs-docs-container">
+								<div class="bs-callout bs-callout-warning" id="callout-modal-youtube">
+							    <h4 id="Info">IMPORTANTE<a class="anchorjs-link" href="#"><span class="anchorjs-icon"></span></a></h4>
+							    <p>
+								 Los reportes del sitio no se encuentran actualemnte activos, los mismo se manejan atraves del MINRESYS, en el vinculo a Reportes. Disculpe las molestias que pueda causar.
+								</p>
+							 </div>
+							</div>
 							<p>
 							Un Incidente Computacional se define como cualquier evento que se produzca, de forma accidental o intencional, que afecte o ponga en peligro las Tecnologías de la Información o los procesos que con ellas se realizan.
 							</p>
 							<p>Si usted sospechara o tuviera evidencia que se está produciendo algún tipo de incidente computacional en su red, deberá garantizar una correcta evaluación de lo que ha ocurrido, a quién, cómo y cuándo debe ser reportado, la respuesta adecuada, así como los aspectos relacionados con su documentación, la preservación de las evidencias y las acciones a seguir una vez restablecida la situación inicial. <br>
  							<b>Vía correo</b>: <a href="mailto:seginf@minrex.gob.cu">seginf@minrex.gob.cu</a></p>
  
+							{# <p><a href="{{ path('reportes_new') }}" class="btn btn-default">Reportar Incidente</a></p> #}
+							<br>
+							 <h4 id="eventos">Ejemplos de Eventos<a class="anchorjs-link" href="#"><span class="anchorjs-icon"></span></a></h4>
+							    <p>
+								 • Intentos (sean fallidos o exitosos) de obtener acceso a un sistema o sus datos.<br>
+								 • Interrupción no deseada o denegación de servicios.<br>
+								 • Uso no autorizado de un sistema para el procesamiento o almacenamiento de información.<br>
+								 • Cambios en las características del hardware, firmware o software del sistema sin el conocimiento, instrucción o consentimiento del responsable de dicho sistema.<br>
+								</p>
 							
 						</aside>
+						{# <li data-job="2"><h4>— Веб-дизайнер</h4></li> #}
+						 
 						<ul id="vc" style="position: absolute; top: 222.5px;">						
-							<li data-job="1"><h1>>> <u>Realizar un reporte</u> >></h1></li>
-							{# <li data-job="2"><h4>— Веб-дизайнер</h4></li> #}
-						</ul>
+							<li data-job="1"></li>							
+						</ul> 
+						
+						
 						
 						<div class="vc-container" id="vc-content" style="margin-bottom: 70px;">
 							<span class="closeBtn icon icon-closer"></span>
@@ -143,7 +157,7 @@
 									<div id="job-content"></div>
 									<h4>Formulario de reporte</h4>
 									<span>*campos de llenado obligatorio</span>
-									<div class="form_input" id="vc-form">
+									<div class="form_input" id="vc-form">										
 										<form action="#/job/apply" method="post" id="job-form" accept-charset="utf-8" class="ajax-form">
 											<input type="hidden" name="job_id">
 											<p class="input-wrap"><label>Nombre completo*</label><input type="text" name="name"></p>
@@ -151,12 +165,12 @@
 											<p class="input-wrap"><label>Área*</label><input type="text" name="lastname"></p>
 											<p class="input-wrap"><label>Correo*</label><input type="text" name="email"></p>
 											<p class="input-wrap"><label>Teléfono*</label><input type="text" name="phone"></p>
-											{# CARGAR UNA IMAGEN
+											CARGAR UNA IMAGEN
 											<div class="load" id="btn-job-vc">
 												<input type="file" name="file" accept="*" id="vc-file">
-												<span class="attach" id="btn-frame">Прикрепить резюме<i></i></span>
+												<span class="attach" id="btn-frame">?????????? ??????<i></i></span>
 												<span class="fill" id="btn-fill"></span>
-											</div> #}
+											</div>
 											<span class="attach-name" id="vc-file-name"></span>
 											<div class="clear"></div>
 											<p>Sobre el Equipo:</p>
@@ -186,11 +200,11 @@
 									<label>Cuba</label>
 									<div class="address">
 										<p class="tel">+7 836 4239</p>
-										<p><a href="mailto:seginf@minrex.gob.cu?Subject=Hola">seginf@minrex.gob.cu</a></p>
+										<p><a href="mailto:seginf@minrex.gob.cu?Subject=Reporte">seginf@minrex.gob.cu</a></p>
 										<p>La Habana, Vedado, Ave. de los Presidentes (G) entre 5ta y Calzada y H</p>
-										Mapa
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.7276280994042!2d-82.39391499999999!3d23.143629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd777c7508870d%3A0x96016e4dbce1239f!2sMinisterio+de+Relaciones+Exteriores!5e0!3m2!1ses!2sru!4v1432241582797" width="600" height="450" frameborder="0" style="border:0"></iframe>
+										Mapa										
 									</div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.7276280994042!2d-82.39391499999999!3d23.143629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd777c7508870d%3A0x96016e4dbce1239f!2sMinisterio+de+Relaciones+Exteriores!5e0!3m2!1ses!2sru!4v1432241582797" width="600" height="450" frameborder="0" style="border:0"></iframe>
 								</li>
 								<div class="clear"></div>
 								<!--
@@ -221,6 +235,8 @@
 	<!-- javascript
 		================================================== -->
 	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/segurex/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/segurex/js/npm.js') }}"></script>
 	{# <!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
 			(function (d, w, c) {

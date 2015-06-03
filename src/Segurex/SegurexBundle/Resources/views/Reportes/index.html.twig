@@ -1,0 +1,66 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %} 
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap-theme.css') }}" rel="stylesheet" media="screen"> 
+
+{% endblock %}
+
+{% block body -%}
+    <h1>Reportes list</h1>
+
+    <div class="container">
+        
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Inventario</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Equipo</th>
+                    <th>Detalles</th>
+                    <th>Fecha</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('reportes_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.nombre }}</td>
+                    <td>{{ entity.inventario }}</td>
+                    <td>{{ entity.telefono }}</td>
+                    <td>{{ entity.correo }}</td>
+                    <td>{{ entity.equipo }}</td>
+                    <td>{{ entity.detalles }}</td>
+                    <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reportes_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reportes_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+
+        <ul>
+        <li>
+            <a href="{{ path('reportes_new') }}">
+                Create a new entry
+            </a>
+            <a href="{{ path('segurex_homepage') }}">
+                Home
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

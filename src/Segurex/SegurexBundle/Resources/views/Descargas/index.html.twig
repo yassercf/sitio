@@ -1,0 +1,77 @@
+{% extends '::base.html.twig' %}
+
+{# {% block stylesheets %} 
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap-theme.css') }}" rel="stylesheet" media="screen"> 
+
+{% endblock %} #}
+
+{% block body -%}
+<div class="page2_sola" style="top: 0%;">
+    <div class="container">
+<<div style="display: block; position: relative;text-align: left;">
+    <h2><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Descargas</h2> 
+</div>
+<div style="display: block; position: relative;text-align: left;">
+<ul style="width: 35%; height: 500px; overflow: auto">
+                                    {% for entity in entitiesD %}
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-placement="right" title="" data-original-title="descargado {{ entity.contador }} veces" data-target="#bs-example-modal-lg-{{entity.id}}">{{ entity.nombre }}</a>          
+                                          {#   <a href="{{url('segurex_homepage')}}{{ entity.ruta }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="descargado {{ entity.contador }} veces" data-toggle="modal" data-target=".bs-example-modal-lg">{{ entity.nombre }}</a>  #}                 
+                                                   
+                                           
+                                           {# 
+                                            Mostrar detalles Pendiente
+                                           <a href="{{ path('descargas_show', { 'id': entity.id }) }}" class="btn btn-default">Detalles</a> #}
+                                            {# 
+                                            Contador pendiente
+                                            ({{ entity.contador }}) #}
+                                            <div id="bs-example-modal-lg-{{entity.id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Descargar {{ entity.nombre }}</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        {{entity.descripcion}} 
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Descargar</button>
+                                                    </div>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                        <script type="text/javascript">
+                                                    $(function () {
+                                                      $('#bs-example-modal-lg-{{entity.id}}').modal('show');
+                                                    });  
+                                        </script> 
+                                        </li>      
+                                    {% endfor %}  
+                                </ul>
+<a href="{{ path('segurex_homepage') }}" class="col-md-4">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Regresar
+        </a>                                
+</div>       
+                                               
+        
+
+        {#
+        SOLO PARA ADMINISTRADOR
+         <ul>
+            <li>
+                <a href="{{ path('descargas_new') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Subir un Archivo
+                </a>
+            </li>
+         #}
+</div>
+ 
+        <script type="text/javascript" src="{{ asset('bundles/segurex/js/jQuery1.9.1.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/segurex/js/bootstrap.min.js') }}"></script>
+        
+</div>   
+    {% endblock %}

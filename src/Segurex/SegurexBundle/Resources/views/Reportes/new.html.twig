@@ -1,0 +1,121 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}	
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link type="text/css" href="{{ asset('bundles/segurex/css/bootstrap-theme.css') }}" rel="stylesheet" media="screen"> 
+    <link type="text/css" href="{{ asset('bundles/segurex/css/datepicker.css') }}" rel="stylesheet" media="screen"> 
+{% endblock %}
+
+{% block body -%}
+
+
+    {# {{ form(form) }} #}
+    {# {{ form_widget(form.nombre, {'attr': {'class': 'foo'}}) }} #}
+   <div class="container">
+<div class="panel panel-default">
+   	<div class="panel-heading" style="color: white; text-shadow: black 0.1em 0.1em 0.2em; font-size: 21px;">Formulario de Reporte</div>
+    <div class="panel-body">
+    	<div class="bs-example" >
+    		
+    		<form>
+			  <div class="form-group">
+			    {# {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }} #}			    
+			    {# {{ form_label(form.nombre, "Nombre y Apellidos:", {'label_attr': {'class': 'col-sm-2 control-label'}}) }} #}
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.nombre, {'attr': {'class': 'form-control', 'placeholder':'NOMBRE Y APELLIDOS', 
+			    	'data-toggle':'tooltip','data-placement':'bottom','title':'Entre su nombre con sus dos apellidos'
+			    	}}) }}
+			    </div>
+			  </div>  
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.correo, {'attr': {'class': 'form-control', 'placeholder':'SU_CORREO@MINREX.GOB.CU', 
+			    	'data-toggle':'tooltip','data-placement':'bottom','title':'Escriba su correo electrónico (ejemplo: pepe@minrex.gob.cu)'}}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			    	</span> 			      	
+			    	<input type="text" value={{ "now"|date("m/d/Y") }}  id="segurex_segurexbundle_reportes_fecha" name="segurex_segurexbundle_reportes[fecha]" required="required" class="form-control" readonly="readonly">
+			    	{# {{ form_widget(form.fecha, {'attr': {'class': 'form-control', 'data-provide':'datepicker','readonly':'readonly'}}) }} #}
+			    	{# {{ form_widget(form.fecha, {'attr': {'class': 'form-control', 'readonly':'readonly' }}) }} #}
+			    </div>
+			  </div> 
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.area, {'attr': {'class': 'form-control', 
+			    	'data-toggle':'tooltip','data-placement':'bottom','title':'Seleccione el área a la que pertenece'}}) }}
+			    </div>
+			  </div> 
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.telefono, {'attr': {'class': 'form-control', 'placeholder':'# TELEFONO'}}) }}
+			    </div>
+			  </div> 
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.inventario, {'attr': {'class': 'form-control', 'placeholder':'# DE INVENTARIO'}}) }}
+			    </div>
+			  </div> 
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.equipo, {'attr': {'class': 'form-control', 'placeholder':'AREA-DEPARTAMENTO-C#'}}) }}
+			    </div>
+			  </div> 
+			  <div class="form-group">
+			    <div class="input-group input-group-lg">
+			    	<span class="input-group-addon" id="sizing-addon1">
+			    		<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+			    	</span> 
+			    	{{ form_widget(form.detalles, {'attr': {'class': 'form-control', 'placeholder':'Describa la situación','style':'margin: 0px; height: 175px;' }}) }}
+			    </div>
+			  </div> 
+			  
+			  			  
+			</form>
+			<div class="text-center">
+					{# <a href="{{ path('reportes') }}" class="btn btn-default">
+		           		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Regresar
+		        	</a> #}
+		        	<a href="{{ path('segurex_homepage') }}#/job" class="btn btn-default">
+		           		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Regresar
+		        	</a>
+		        	<button type="submit" id="segurex_segurexbundle_reportes_submit" name="segurex_segurexbundle_reportes[submit]" class="btn btn-success" style="margin: 0px 0px 0 2px;"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Enviar</button>
+		        	{# {{ form_row(form.submit, {'attr': {'class': 'btn btn-success col-xs-4'},'label': ' Enviar'}) }} #}
+			  	</div>	
+    	</div>
+    	   	
+    </div>	
+   </div>
+   </div>
+    {% block javascripts %}
+    	<script type="text/javascript" src="{{ asset('bundles/segurex/js/jQuery1.9.1.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/segurex/js/bootstrap.min.js') }}"></script>
+        
+        
+        <script type="text/javascript">
+			$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			});			
+		</script>       
+	{% endblock %}
+{% endblock %}

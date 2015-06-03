@@ -1,0 +1,30 @@
+reportes:
+    path:     /
+    defaults: { _controller: "SegurexBundle:Reportes:index" }
+
+reportes_show:
+    path:     /{id}/show
+    defaults: { _controller: "SegurexBundle:Reportes:show" }
+
+reportes_new:
+    path:     /new
+    defaults: { _controller: "SegurexBundle:Reportes:new" }
+
+reportes_create:
+    path:     /create
+    defaults: { _controller: "SegurexBundle:Reportes:create" }
+    requirements: { _method: post }
+
+reportes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SegurexBundle:Reportes:edit" }
+
+reportes_update:
+    path:     /{id}/update
+    defaults: { _controller: "SegurexBundle:Reportes:update" }
+    requirements: { _method: post|put }
+
+reportes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SegurexBundle:Reportes:delete" }
+    requirements: { _method: post|delete }

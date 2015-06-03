@@ -3,12 +3,14 @@
 namespace Segurex\SegurexBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Segurex\SegurexBundle\Entity\Descargas;
+
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {       
-        /*
+        /**
             $titulares: Contiene los 6 ultimos titulares marcados como ESPECIAL en la Base de Datos de articulos.
         */
         $titulares = array(
@@ -18,8 +20,18 @@ class DefaultController extends Controller
             't4' => "Circula por la Red Nacional el programa maligno Win32.Onion.",
             't5' => "Vulnerabilidad SuperFish en portátiles Lenovo",
             't6' => "Graves vulnerabilidades en WordPress",);
-        return $this->render('SegurexBundle:Default:index.html.twig', array('titulares' => $titulares));
-    }
+        /**
+            $entitiesD: Lista de archivos de Descargas.
+        */
+        $em = $this->getDoctrine()->getManager();
+        $entitiesD = $em->getRepository('SegurexBundle:Descargas')->findAll();
+
+
+            return $this->render('SegurexBundle:Default:index.html.twig', array(
+                'titulares' => $titulares, 
+                'entitiesD' => $entitiesD
+                ));
+        }
 
     public function errorAction()
     {    	    	   	

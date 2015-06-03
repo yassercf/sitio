@@ -1,3 +1,11 @@
+segurex_descargas:
+    resource: "@SegurexBundle/Resources/config/routing/descargas.yml"
+    prefix:   /descargas
+
+segurex_reportes:
+    resource: "@SegurexBundle/Resources/config/routing/reportes.yml"
+    prefix:   /reportes
+
 segurex_homepage:
     path:     /
     defaults: { _controller: SegurexBundle:Default:index }

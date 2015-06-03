@@ -295,6 +295,7 @@ section.page3 {
 	-ms-background-size: cover !important;
 	-o-background-size: cover !important;
 	background-size: cover !important;
+	  background-color: #805898;
 }
 ul#about{ top: 1% !important; }
 ul#about li {
@@ -2407,4 +2408,13 @@ body.no-scroll .wrapper {
 }
 .icon-world:before {
 	content: "\e62f";
+}
+
+.page2_sola{
+	background: url("../images/bg_2.jpg") no-repeat center center !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-ms-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
 }
