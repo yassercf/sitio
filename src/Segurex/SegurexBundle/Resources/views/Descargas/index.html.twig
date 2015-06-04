@@ -9,7 +9,7 @@
 {% block body -%}
 <div class="page2_sola" style="top: 0%;">
     <div class="container">
-<<div style="display: block; position: relative;text-align: left;">
+<div style="display: block; position: relative;text-align: left;">
     <h2><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Descargas</h2> 
 </div>
 <div style="display: block; position: relative;text-align: left;">
@@ -38,7 +38,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Descargar</button>
+<a href="{{url('segurex_homepage')}}{{ entity.ruta }}" class="btn btn-primary" id="myButton" data-loading-text="Descargando..." autocomplete="off">Descargar</a>
                                                     </div>
                                                   
                                                 </div>
@@ -48,6 +48,11 @@
                                                     $(function () {
                                                       $('#bs-example-modal-lg-{{entity.id}}').modal('show');
                                                     });  
+                                                    $('#myButton').on('click', function () {
+                                                        var $btn = $(this).button('loading')
+                                                        // business logic...
+                                                        $btn.button('reset')
+                                                      })
                                         </script> 
                                         </li>      
                                     {% endfor %}  
